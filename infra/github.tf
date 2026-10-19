@@ -18,7 +18,7 @@ resource "aws_iam_role" "deploy" {
       Condition = {
         StringEquals = {
           "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
-          "token.actions.githubusercontent.com:sub" = "repo:${local.github_repo}:ref:refs/heads/main"
+          "token.actions.githubusercontent.com:sub" = "repo:hammond-0023@209464432/url-shortener@1422265845:ref:refs/heads/main"
         }
       }
     }]
@@ -30,3 +30,4 @@ resource "aws_iam_role_policy_attachment" "deploy_admin" {
   role       = aws_iam_role.deploy.name
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
 }
+
