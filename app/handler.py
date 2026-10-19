@@ -47,4 +47,5 @@ def lambda_handler(event, context):
         if item:
             return reply(302, '', {'Location': item['url']})
 
-    return reply(404, 'Not found')
+    return reply(404, 'Nothing here')
+
